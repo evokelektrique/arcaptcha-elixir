@@ -1,13 +1,17 @@
-defmodule ArcaptchaElixir.MixProject do
+defmodule Arcaptcha.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :arcaptcha_elixir,
-      version: "0.1.0",
+      app: :arcaptcha,
+      version: "1.0.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      description: description(),
+      package: package(),
+      deps: deps(),
+      name: "Arcaptcha",
+      source_url: "https://github.com/evokelektrique/arcaptcha-elixir"
     ]
   end
 
@@ -21,8 +25,21 @@ defmodule ArcaptchaElixir.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:ex_doc, "~> 0.24", only: :dev, runtime: false},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:httpoison, "~> 1.8"},
+      {:jason, "~> 1.2"}
+    ]
+  end
+
+  defp description() do
+    "Validate and display captcha from Arcaptcha easily in Elixir"
+  end
+
+  defp package() do
+    [
+      licenses: ["AGPL-3.0-or-later"],
+      links: %{"GitHub" => "https://github.com/evokelektrique/arcaptcha-elixir"}
     ]
   end
 end

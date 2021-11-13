@@ -1,21 +1,31 @@
-# ArcaptchaElixir
+# Arcaptcha
 
-**TODO: Add description**
+Validate and display captcha from Arcaptcha easily in Elixir. ([documentation](https://hexdocs.pm/arcaptcha/Arcaptcha.html#content))
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `arcaptcha_elixir` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `arcaptcha_elixir` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:arcaptcha_elixir, "~> 0.1.0"}
+    {:arcaptcha_elixir, "~> 1.0.0"}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/arcaptcha_elixir](https://hexdocs.pm/arcaptcha_elixir).
+## Usage
 
+```elixir
+# Verify challenge
+iex> Arcaptcha.verify("site_key", "secret_key", "challenge_id")
+true
+
+# Display API script tag
+iex> Arcaptcha.display_tag()
+"<script src='https://widget.arcaptcha.ir/1/api.js' async defer></script>"
+
+# Display captcha HTML tag
+iex> Arcaptcha.display("my_site_key")
+"<div class='arcaptcha' data-site-key='my_site_key'></div>"
+```
