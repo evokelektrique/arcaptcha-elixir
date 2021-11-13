@@ -1,15 +1,18 @@
-# Arcaptcha
+<h1>
+  <img src="https://arcaptcha.ir/logo.png" width="80" />
+  Arcaptcha
+</h1>
 
 Validate and display captcha from Arcaptcha easily in Elixir. ([documentation](https://hexdocs.pm/arcaptcha/Arcaptcha.html#content))
 
 ## Installation
 
-The package can be installed by adding `arcaptcha_elixir` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `arcaptcha` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:arcaptcha_elixir, "~> 1.0.0"}
+    {:arcaptcha, "~> 1.0.0"}
   ]
 end
 ```
