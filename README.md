@@ -1,6 +1,10 @@
 <h1>
   <img src="https://arcaptcha.ir/logo.png" width="80" />
   Arcaptcha
+  
+  <!-- Badges -->
+  <img alt="Hex.pm" src="https://img.shields.io/hexpm/l/arcaptcha?style=flat-square">
+  <img alt="Hex.pm" src="https://img.shields.io/hexpm/v/arcaptcha?style=flat-square">
 </h1>
 
 Validate and display captcha from Arcaptcha easily in Elixir. ([documentation](https://hexdocs.pm/arcaptcha/Arcaptcha.html#content))
